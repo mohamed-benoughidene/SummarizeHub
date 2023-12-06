@@ -21,11 +21,11 @@ const [err, setErr] = useState(false);
 const logIn = async () => {
     // Create an object with email and password properties
   const data = {email, password: pass};
+  
   setLoading(true);
   try{
         // Send a POST request to the "/api/login" endpoint with the data object
-
-    const response = await axios.post("/api/login", {...data});
+    const response = await axios.post("https://summarizehub.onrender.com/api/login", {...data});
         // Extract the token and userEmail from the response data
 
     const token = response.data.token;

@@ -21,7 +21,7 @@ const signUp = async () => {
   
   try {
     // Send a POST request to the "/api/signup" endpoint with the data object
-    const response = await axios.post("/api/signup", { ...data });
+    const response = await axios.post("https://summarizehub.onrender.com/api/signup", { ...data });
     // Dispatch a "LOGIN" action with the response data
     dispatch({ type: "LOGIN", payload: response.data });
     // Extract the token and user email from the response data

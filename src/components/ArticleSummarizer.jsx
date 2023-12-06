@@ -21,7 +21,7 @@ export default function ArticleSummarizer({ data }) {
       // Send a POST request to the '/api/article-summarizer' endpoint
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        '/api/article-summarizer',
+        'https://summarizehub.onrender.com/api/article-summarizer',
         { ...requestData },
         {
           headers: {
@@ -38,7 +38,6 @@ export default function ArticleSummarizer({ data }) {
       setLoading(false);
     }
   }
-
   // Function to render the appropriate content based on the state
   function render() {
     if (loading && !summary) {
