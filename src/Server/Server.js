@@ -12,4 +12,4 @@ mongoose.connect(DB_Key).then(()=>{
        console.log("server running"); 
 app.use('/api', userRoutes);
 app.use('/api', articlesRoutes);
-    }).catch(err=>{ console.log(err.message);});
+    }).catch(err=>{ console.log("error:" + err.message);});
