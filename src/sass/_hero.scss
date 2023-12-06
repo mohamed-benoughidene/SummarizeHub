@@ -1,0 +1,38 @@
+#hero{
+    padding-top: 55px;
+   display: flex;
+   flex-direction: column;
+text-align: center;
+   align-items: center;
+ padding-bottom: 2em;
+ gap: 1em;
+}
+.hero-img{
+width: 50%;
+}
+.hero-text{
+   h1{
+      margin-bottom: 0.2em;
+   }
+}
+@media (min-width: 900px) {
+    #hero{
+      height: 100vh;
+      max-height: 900px;
+       flex-direction: row;
+    text-align: left;
+    align-items: center;
+       justify-content: space-between;
+    }  
+    .hero-img{
+       order: 2;
+       width: 27.8%;
+       max-width: 800px;
+        }
+        .hero-text{
+            width: 55%;
+            h1{
+               font-size: 2.5rem;
+            }
+        }   
+}

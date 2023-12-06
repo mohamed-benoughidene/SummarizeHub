@@ -1,0 +1,43 @@
+.login, .signUp{
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    form {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+     margin: 0 auto;
+  }
+  input, .btn{
+    width: 100%;
+  }
+  p{
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 800px) {
+    .login, .signUp{  
+      max-height: 800px;
+        gap: 1em;
+        form {
+          width: 50%;
+          max-width: 400px;
+          margin: 0 auto;
+          gap: 1em;
+          input{
+              width: 100%;
+          }
+      }
+      .btn{
+        width: 100%;
+      }
+    }
+}

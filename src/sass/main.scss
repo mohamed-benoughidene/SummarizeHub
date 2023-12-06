@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+$text-font: 'Mulish', sans-serif;;
+$headers-font:'Playfair Display', serif;
+$text-color: #1f1f1f;
+$text-color2: #EDEDED;
+$cl1:#FF0042;
+$cl2:#1C4C8E;
+$bgCol:#EDEDED;
+$secCol:#F3F3F3;
+$thirdCol:#E5A043;
+$fourthCol:#F7F7F7;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+transition: all 0.2s ease-out;
+color: $text-color; 
+overflow-x: hidden;
+}
+body{
+    background-color: $bgCol;
+}
+// reuseable classes
+.container{
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+.btn{
+    background-color: $thirdCol;
+    color: $text-color2;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;   
+    margin: 0;
+    cursor: pointer;
+    padding: 0.6em 2em;
+}
+.err{
+    background-color: #ffee0063;
+    width: 100%;
+    color: $cl1;
+    text-align: center;
+    padding: 0.2em;
+    font-family: $text-font;
+}
+.loader{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.highlight{
+    color: $thirdCol;
+    font-weight: bold;
+}
+// elements styling
+p{
+    font-family: $text-font;
+   
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $headers-font;
+    color: $text-color;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-family: $text-font;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+   }
+input{
+    
+    border: none;
+outline: none;
+    font-size: 1.1rem;
+    padding: 0.7em;
+}
+
+@media (min-width: 800px) {
+    .container{
+        padding: 0 5em;
+    }
+}
+
+@import './nav';
+@import './hero';
+@import './about';
+@import './contact';
+@import './login';
+@import './footer';
+@import'./summarizer';

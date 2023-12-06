@@ -1,0 +1,40 @@
+#contact{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    input{
+        width: 100%;
+    }
+    textarea{
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+        padding: 0.7em;
+        resize: none;
+        width: 100%;
+    }
+}
+}
+.contact-img{
+    width: 40%;
+}
+@media (min-width:800px){
+    #contact{
+    form{
+        width: 50%;
+    }
+    }
+    .contact-img{
+        width: 25%;
+        max-width: 600px;
+    }
+}

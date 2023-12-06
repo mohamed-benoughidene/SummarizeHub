@@ -1,0 +1,29 @@
+#about{
+   
+    background-color: white;
+    padding: 2em 1em;
+    border-radius: 10px;
+    margin: 1em 0;
+  
+  gap: 1em;
+}
+.about-img{
+    width: 100%;
+}
+.about-text{
+    text-align: center;
+}
+@media (min-width: 800px) {
+    #about{
+        display: flex;
+        align-items: center;
+    }
+    .about-img{
+        flex-basis: 50%;
+        
+    }
+    .about-text{
+        text-align: left;
+      flex-basis: 80%;
+    }
+}
