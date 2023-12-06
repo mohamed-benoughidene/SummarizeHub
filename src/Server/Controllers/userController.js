@@ -2,7 +2,7 @@ const userModule = require('../module/userModule');
 require('dotenv').config();
 
 const jwt = require('jsonwebtoken');
-const Secret = process.env.SECRET_KEY; 
+const Secret = "gy3P6kCN9@!fT2$Z"; 
 // Define a function called generateToken that takes in an _id parameter
 function generateToken(_id){
         // Generate a token by signing the _id with the Secret
