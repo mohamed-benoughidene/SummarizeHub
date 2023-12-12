@@ -1,15 +1,15 @@
 const axios = require('axios');
 
-async function articleSummarizer (req, res) {
+async function urlSummarizer (req, res) {
         // Destructuring properties from the request body
-    const {articleUrl, language,length} = req.body;
+    const {url, language,length} = req.body;
    
         // Setting up the options object for the API request
     const options = {
         method: 'GET',
         url: 'https://article-extractor-and-summarizer.p.rapidapi.com/summarize',
         params: {
-          url: articleUrl,
+          url: url,
           length: length,
           lang: language,
          
@@ -60,4 +60,4 @@ async function textSummarizer(req,res){
  }
 }
 
-module.exports = {articleSummarizer, textSummarizer};
+module.exports = {urlSummarizer, textSummarizer};

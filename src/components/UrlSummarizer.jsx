@@ -2,18 +2,18 @@ import React,{useState} from 'react';
 import axios from 'axios';
 import Loader from './Loader';
 // Refactored function that summarizes an article
-export default function ArticleSummarizer({ data }) {
+export default function UrlSummarizer({ data }) {
   // Destructure the 'data' object
   const { language, length } = data;
   // Set initial state variables using the 'useState' hook
-  const [articleUrl, setArticleUrl] = useState('');
+  const [url, setUrl] = useState('');
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   // Function to summarize the article
-  async function summarizeArticle(e) {
+  async function summarizeUrl(e) {
     e.preventDefault();
-    const requestData = { articleUrl, language, length };
+    const requestData = { url, language, length };
     // Update the loading state and clear the summary
     setLoading(true);
     setSummary(null);
@@ -52,11 +52,12 @@ export default function ArticleSummarizer({ data }) {
       return <p className='summary-text'>{summary}</p>;
     }
   }
+  
   return (
     <div className='article-summarizer'>
       <form>
-        <input type='text' onChange={e => setArticleUrl(e.target.value)} />
-        <button className='btn' type='submit' onClick={e => summarizeArticle(e)}>
+        <input type='text' onChange={e => setUrl(e.target.value)} />
+        <button className='btn' type='submit' onClick={e => summarizeUrl(e)}>
           Summarize
         </button>
       </form>

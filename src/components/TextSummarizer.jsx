@@ -10,12 +10,12 @@ const [Summary, setSummary] = useState(null);
 
    async function summarizeText(e){
     e.preventDefault();
-   const data = {text,language,length};
+   const requestData = {text,language,length};
    setLoading(true);
    setSummary(null);
    try{
     const token = localStorage.getItem('token');
-     const response = await axios.post('https://summarizehub.onrender.com/api/text-summarizer', {...data},{
+     const response = await axios.post('https://summarizehub.onrender.com/api/text-summarizer', {...requestData},{
       headers: {
         Authorization: `Bearer ${token}`,
       },

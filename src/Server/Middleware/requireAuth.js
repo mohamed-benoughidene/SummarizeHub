@@ -5,7 +5,7 @@ require("dotenv").config();
 async function requireAuth(req,res,next){
  const { authorization } = req.headers;
 
- const Secret = "gy3P6kCN9@!fT2$Z";
+ const Secret = process.env.SECRET;
 
 if(!authorization){
     res.status(401).send({error:"you must be logged in"});

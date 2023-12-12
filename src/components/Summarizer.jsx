@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
 import Nav from './Nav';
-import ArticleSummarizer from './ArticleSummarizer';
+import UrlSummarizer from './UrlSummarizer';
 import TextSummarizer from './TextSummarizer'
 export default function Summarizer () {
   const [language, setLanguage] = useState('en');
-  const [Summarize, setSummarize] = useState('online article');
+  const [Summarize, setSummarize] = useState('url');
   const [length, setLength] = useState(3);
   const languages = [
     { lang: 'English', code: 'en' },
@@ -53,9 +53,9 @@ export default function Summarizer () {
 
 function renderSummarizer() {
   // Check if the value of Summarize is 'online article'
-  if (Summarize === 'online article') {
+  if (Summarize === 'url') {
     // If true, return the component <ArticleSummarizer> with the data prop containing the values of language and length
-    return <ArticleSummarizer data={{language, length}}/>;
+    return <UrlSummarizer data={{language, length}}/>;
   } else if(Summarize === 'text') {
     // If the value of Summarize is 'text', return the component <TextSummarizer> with the data prop containing the values of language and length
     return <TextSummarizer data={{language, length}}/>;
@@ -71,7 +71,7 @@ function renderSummarizer() {
     <div className="question">
       <p>summarize</p>
       <select onChange={(e) => setSummarize(e.target.value)}>
-      <option value="online article">Online article</option>
+      <option value="url">Url</option>
       <option value="text">Text</option>
       </select>
     </div>
