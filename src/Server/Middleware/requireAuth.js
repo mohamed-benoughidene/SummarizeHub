@@ -5,7 +5,7 @@ require("dotenv").config();
 async function requireAuth(req,res,next){
  const { authorization } = req.headers;
 
- const Secret = process.env.SECRET;
+ const secret = process.env.SECRET;
 
 if(!authorization){
     res.status(401).send({error:"you must be logged in"});
@@ -13,7 +13,7 @@ if(!authorization){
 const token = authorization.split(" ")[1]
 
 try{
-const {_id} = jwt.verify(token, Secret)
+const {_id} = jwt.verify(token, secret)
  req.user = await userModule.findOne({_id});
  next()
 }catch(err){
