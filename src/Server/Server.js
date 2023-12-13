@@ -6,7 +6,6 @@ require('dotenv').config();
 app.use(express.json());
 const port = process.env.PORT;
 const DB_Key = process.env.DB_KEY;
- const SECRET_KEY = process.env.SECRET_KEY;
 const userRoutes = require('./Routes/UserRoutes');
 const SummarizerRoutes = require('./Routes/SummarizerRoutes');
 app.use(cors());
